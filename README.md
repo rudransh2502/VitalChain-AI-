@@ -320,7 +320,7 @@ npm --version     # v9.0.0 or higher required
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/byte-x-ploit/vitalchain-ai.git
+git clone https://github.com/crrajiv-ux/VitalChain-AI-.git
 cd vitalchain-ai
 ```
 
