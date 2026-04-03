@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary clinical blues
+
         vital: {
           50:  '#eef6ff',
           100: '#daeaff',
@@ -21,7 +21,7 @@ export default {
           900: '#192f89',
           950: '#141f53',
         },
-        // Medical greens (safe indicators)
+
         sage: {
           50:  '#edfcf4',
           100: '#d3f8e4',
@@ -35,7 +35,7 @@ export default {
           900: '#094b34',
           950: '#032a1e',
         },
-        // Risk/alert ambers
+
         risk: {
           50:  '#fff8eb',
           100: '#feecc7',
@@ -49,7 +49,7 @@ export default {
           900: '#78280e',
           950: '#451203',
         },
-        // Danger reds
+
         critical: {
           50:  '#fef2f2',
           100: '#fee2e2',
@@ -62,7 +62,7 @@ export default {
           800: '#991b1b',
           900: '#7f1d1d',
         },
-        // Neutral clinical grays
+
         clinical: {
           50:  '#f8fafc',
           100: '#f1f5f9',
