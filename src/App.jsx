@@ -8,7 +8,6 @@ import {
   Box, AlertTriangle, CheckCheck, LocateFixed, Menu,
 } from "lucide-react";
 
-// ─── Google Font ──────────────────────────────────────────────────────────────
 const FontLink = () => (
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
@@ -16,7 +15,6 @@ const FontLink = () => (
   />
 );
 
-// ─── Constants ────────────────────────────────────────────────────────────────
 const PRODUCTS = [
   { name: "COVID-19 Vaccine", Icon: Syringe },
   { name: "Insulin Vials",    Icon: FlaskConical },
@@ -45,7 +43,6 @@ function truncateHash(h = "") {
   return h.length > 18 ? `${h.slice(0, 10)}…${h.slice(-6)}` : h;
 }
 
-// ─── Shipment timeline data ───────────────────────────────────────────────────
 const TIMELINE_STEPS = [
   { label: "Picked Up",  location: "Safdarjung Depot, Delhi",  icon: Box,         status: "done" },
   { label: "In Transit", location: "NH-24, Noida Expressway",  icon: Truck,       status: "active" },
@@ -65,7 +62,6 @@ function getShipmentTimeline(id) {
   return SHIPMENT_DB[id];
 }
 
-// ─── Sidebar nav items ────────────────────────────────────────────────────────
 const NAV_ITEMS = [
   { id: "dashboard",  label: "Active Shipments", icon: Activity },
   { id: "map",        label: "Live Transit Map",  icon: MapPin },
@@ -74,15 +70,10 @@ const NAV_ITEMS = [
   { id: "settings",   label: "Settings",           icon: Settings },
 ];
 
-// ─── Animation variants ───────────────────────────────────────────────────────
 const fadeUp   = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } } };
 const fadeIn   = { hidden: { opacity: 0 },         show: { opacity: 1, transition: { duration: 0.3 } } };
 const stagger  = { show: { transition: { staggerChildren: 0.08 } } };
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  BLOCKCHAIN MODAL
-// ─────────────────────────────────────────────────────────────────────────────
-function VerifyModal({ row, onClose }) {
   const [phase, setPhase] = useState("loading");
   const [dots,  setDots]  = useState("");
 
@@ -189,9 +180,6 @@ function VerifyModal({ row, onClose }) {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  SHIPMENT SEARCH + TIMELINE
-// ─────────────────────────────────────────────────────────────────────────────
 function ShipmentSearch() {
   const [query,    setQuery]    = useState("");
   const [result,   setResult]   = useState(null);
@@ -316,9 +304,6 @@ function ShipmentSearch() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  LIVE TRANSIT MAP (SVG animated truck)
-// ─────────────────────────────────────────────────────────────────────────────
 function LiveMapCard() {
   const [progress, setProgress] = useState(0);
   const [phase,    setPhase]    = useState("transit"); // transit | arrived | reset
@@ -460,9 +445,6 @@ function LiveMapCard() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  METRIC CARDS
-// ─────────────────────────────────────────────────────────────────────────────
 function SkeletonCard() {
   return (
     <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden animate-pulse">
@@ -476,9 +458,6 @@ function SkeletonCard() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  ANALYTICS PLACEHOLDER
-// ─────────────────────────────────────────────────────────────────────────────
 function AnalyticsView() {
   const bars = [62, 78, 45, 91, 55, 83, 70, 48, 95, 60, 74, 88];
   return (
@@ -589,9 +568,6 @@ function SettingsView() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  MAIN APP
-// ─────────────────────────────────────────────────────────────────────────────
 export default function App() {
   const [temperature,    setTemperature]    = useState(null);
   const [humidity,       setHumidity]       = useState(null);
